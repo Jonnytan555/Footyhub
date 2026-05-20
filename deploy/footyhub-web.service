@@ -1,0 +1,14 @@
+[Unit]
+Description=FootyhubAws Web API (uvicorn)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/FootyhubAws
+EnvironmentFile=/home/ubuntu/FootyhubAws/.env
+ExecStart=/home/ubuntu/FootyhubAws/venv/bin/uvicorn api.app:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

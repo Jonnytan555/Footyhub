@@ -1,6 +1,9 @@
 # Secrets — never commit
 .env
 
+# Personal notes
+PLAN.md
+
 # Python
 __pycache__/
 *.py[cod]

@@ -13,8 +13,7 @@ from utils.db.db_access import build_engine
 from listeners.article_pipeline import ArticlePipeline
 from listeners.read.perplexity_search import PerplexitySearch
 from listeners.transform.article_mapper import FootballArticleMapper
-from listeners.queue.db.db_queue_writer import DbQueueWriter
-from utils.scraper.persistence.db_insert_handler import DbInsertHandler
+from listeners.queue.sqs.sqs_queue_writer import SQSQueueWriter
 from runners.ai.topics import FOOTBALL_TOPICS
 from dotenv import load_dotenv
 
@@ -53,13 +52,9 @@ def run():
                 extra_blocked_domains={"mancity.com"},
             ),
             enricher=FootballArticleMapper(source_name=settings.SOURCE_NAME, source_type=settings.SOURCE_TYPE),
-            writer=DbQueueWriter(
-                handler=DbInsertHandler(
-                    engine=engine,
-                    table_name="article_queue",
-                    schema="dbo",
-                    key_cols=["source_type", "source_name", "source_record_id"],
-                )
+            writer=SQSQueueWriter(
+                queue_url=os.environ["SQS_QUEUE_URL"],
+                region=os.environ.get("AWS_REGION", "eu-west-2"),
             ),
         ).run()
 

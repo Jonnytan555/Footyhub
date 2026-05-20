@@ -6,7 +6,7 @@ from fastapi.templating import Jinja2Templates
 from api.web.chat_service import chat
 from api.web.models import ChatRequest
 from runners.ai.taxonomy import FOOTBALL_TREE
-from api.web.queries import get_articles, toggle_like, get_like_state, save_message, get_chat_history
+from api.web.queries import get_articles, toggle_like, get_like_state, save_message, get_chat_history, get_favourite_club
 from api.web.auth import (
     get_current_user, get_user_by_username, create_user,
     hash_password, verify_password, create_token,
@@ -123,7 +123,8 @@ def chat_partial(message: str = Form(...), current_user=Depends(get_current_user
     user_id = int(current_user["sub"])
     history = get_chat_history(user_id)
     history.append({"role": "user", "content": message})
-    reply, filter_action = chat(history)
+    favourite_club = get_favourite_club(user_id)
+    reply, filter_action = chat(history, user_id=user_id, favourite_club=favourite_club)
     save_message(user_id, "user", message)
     save_message(user_id, "assistant", reply)
 

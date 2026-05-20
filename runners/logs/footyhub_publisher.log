@@ -181,3 +181,25 @@ sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', "[42S22] [M
 2026-05-13 14:21:59,126 [MainThread  ] [WARNING ] [perplexity_search.py:58] Skipping [6] https://theanalyst.com/competition/uefa-europa-league — citation text too short (0 chars)
 2026-05-13 14:21:59,739 [MainThread  ] [INFO    ] [db_insert_handler.py:63] [DbInsertHandler] Inserted 23 new rows into dbo.article_queue
 2026-05-13 14:21:59,744 [MainThread  ] [INFO    ] [run_publisher.py:64] Finished footyhub publisher. Duration: 45.9s
+2026-05-15 17:36:42,765 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: latest Premier League breaking news injuries manager updates team news
+2026-05-15 17:36:52,393 [MainThread  ] [INFO    ] [perplexity_search.py:58] Skipping [2] https://www.youtube.com/watch?v=Ok0Mn0SXIk4 — blocked domain
+2026-05-15 17:36:52,394 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: latest Premier League transfer news confirmed transfers transfer rumours contracts
+2026-05-15 17:37:00,808 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Premier League tactical analysis xG pressing formations football analytics
+2026-05-15 17:37:12,191 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Premier League injury news expected return team news press conference
+2026-05-15 17:37:19,123 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Premier League match reports goals highlights weekend results
+2026-05-15 17:37:21,958 [MainThread  ] [INFO    ] [perplexity_search.py:58] Skipping [1] https://www.mancity.com/citytv/mens/manchester-city-brentford-202526-short-highlights-63913950 — blocked domain
+2026-05-15 17:37:21,959 [MainThread  ] [INFO    ] [perplexity_search.py:58] Skipping [2] https://www.mancity.com/citytv/mens/manchester-city-brentford-202526-extended-highlights-63913950 — blocked domain
+2026-05-15 17:37:21,959 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Premier League manager news press conference sacking appointment
+2026-05-15 17:37:28,226 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [3] https://sportsgazette.co.uk/sacked-football-managers-ranked/ — citation text too short (0 chars)
+2026-05-15 17:37:28,227 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Champions League latest news results fixtures draw
+2026-05-15 17:37:45,664 [MainThread  ] [INFO    ] [web_search_reader.py:27] Searching: Europa League latest news results fixtures draw
+2026-05-15 17:37:55,127 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [2] https://www.premierleague.com/en/news/4611009/race-for-champions-league-spots-how-it-stands-and-remaining-fixtures/ — citation text too short (0 chars)
+2026-05-15 17:37:55,128 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [3] https://www.skysports.com/championship — citation text too short (0 chars)
+2026-05-15 17:37:55,129 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [4] https://theanalyst.com/competition/uefa-conference-league — citation text too short (0 chars)
+2026-05-15 17:37:55,130 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [7] https://www.chelseafc.com/en/matches/mens-fixtures-and-results?tab=Results — citation text too short (0 chars)
+2026-05-15 17:37:55,131 [MainThread  ] [WARNING ] [perplexity_search.py:62] Skipping [9] https://www.soccernews.com/category/european-championships/ — citation text too short (0 chars)
+2026-05-15 17:37:55,562 [MainThread  ] [INFO    ] [db_insert_handler.py:63] [DbInsertHandler] Inserted 17 new rows into dbo.article_queue
+2026-05-15 17:37:55,575 [MainThread  ] [INFO    ] [run_publisher.py:66] Finished footyhub publisher. Duration: 72.8s
+2026-05-15 17:39:14,156 [MainThread  ] [INFO    ] [main.py:41] Registered job: Fetch articles from Perplexity  article_queue
+2026-05-15 17:39:14,162 [MainThread  ] [INFO    ] [main.py:41] Registered job: Enrich article_queue with Claude  articles
+2026-05-15 18:00:00,001 [MainThread  ] [INFO    ] [main.py:46] Scheduler stopped.

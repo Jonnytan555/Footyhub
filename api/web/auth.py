@@ -45,7 +45,7 @@ def get_current_user(request: Request) -> dict | None:
 def get_user_by_username(username: str):
     with engine.connect() as conn:
         return conn.execute(
-            sa.text("SELECT id, username, password_hash FROM dbo.users WHERE username = :username"),
+            sa.text("SELECT id, username, password_hash FROM users WHERE username = :username"),
             {"username": username},
         ).fetchone()
 
@@ -54,8 +54,8 @@ def create_user(username: str, password_hash: str) -> int:
     with engine.connect() as conn:
         row = conn.execute(
             sa.text(
-                "INSERT INTO dbo.users (username, password_hash) OUTPUT INSERTED.id "
-                "VALUES (:username, :password_hash)"
+                "INSERT INTO users (username, password_hash) VALUES (:username, :password_hash) "
+                "RETURNING id"
             ),
             {"username": username, "password_hash": password_hash},
         ).fetchone()

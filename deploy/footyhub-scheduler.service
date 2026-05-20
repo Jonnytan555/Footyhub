@@ -1,0 +1,14 @@
+[Unit]
+Description=FootyhubAws Scheduler (publisher + subscriber)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/FootyhubAws
+EnvironmentFile=/home/ubuntu/FootyhubAws/.env
+ExecStart=/home/ubuntu/FootyhubAws/venv/bin/python runners/scheduler/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+2026-05-15 17:39:14,156 [MainThread  ] [INFO    ] [main.py:41] Registered job: Fetch articles from Perplexity  article_queue
+2026-05-15 17:39:14,162 [MainThread  ] [INFO    ] [main.py:41] Registered job: Enrich article_queue with Claude  articles
+2026-05-15 18:00:00,001 [MainThread  ] [INFO    ] [main.py:46] Scheduler stopped.

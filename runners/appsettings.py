@@ -1,3 +1,5 @@
+import os
+
 SOURCE_NAME = "FootballNewsSites"
 SOURCE_TYPE = "football"
 
@@ -13,6 +15,5 @@ SCHEDULE_GAP_MINS = 15
 
 APP_NAME = "footyhub"
 
-DB_SERVER = "localhost"
-DB_NAME   = "FootyHub"
-DB_DRIVER = "ODBC Driver 17 for SQL Server"
+SQS_QUEUE_URL = os.environ["SQS_QUEUE_URL"]
+AWS_REGION    = os.environ.get("AWS_REGION", "eu-west-2")

@@ -238,3 +238,26 @@ sqlalchemy.exc.ProgrammingError: (pyodbc.ProgrammingError) ('42S22', "[42S22] [M
 2026-05-13 13:56:27,278 [MainThread  ] [INFO    ] [enricher.py:39] Enrichment complete — tagged: 29, failed: 0
 2026-05-13 13:56:27,549 [MainThread  ] [INFO    ] [db_insert_handler.py:63] [DbInsertHandler] Inserted 29 new rows into dbo.articles
 2026-05-13 13:56:27,585 [MainThread  ] [INFO    ] [run_subscriber.py:53] Finished footyhub subscriber. Duration: 36.8s
+2026-05-15 17:38:23,453 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.premierleague.com/en/news/4657288/predicted-line]  competition=Premier League club=Liverpool player=Ibrahima Konaté theme=Injuries
+2026-05-15 17:38:24,637 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.nbcsports.com/soccer/news/premier-league-injury-]  competition=Premier League club=Arsenal player=Mikel Merino theme=Injuries
+2026-05-15 17:38:25,861 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.espn.com/soccer/story/_/id/48771056/every-premie]  competition=Premier League club=Liverpool player=Florian Wirtz theme=Injuries
+2026-05-15 17:38:26,862 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://manchestercityanalysis.com/analytics-in-football]  competition=Premier League club=Manchester City player=None theme=Tactics
+2026-05-15 17:38:27,918 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.sportbotai.com/blog/football-match-analysis-tech]  competition=Champions League club=Manchester United player=None theme=Tactics
+2026-05-15 17:38:31,358 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.espn.com/soccer/story/_/id/48758776/want-hire-ne]  competition=None club=Liverpool player=Jürgen Klopp theme=Managers
+2026-05-15 17:38:32,430 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.wslfootball.com/survey-results-round-two-what-co]  competition=None club=None player=None theme=Tactics
+2026-05-15 17:38:33,317 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.fantasyfootballscout.co.uk/2026/05/15/fpl-gamewe]  competition=Premier League club=None player=None theme=Injuries
+2026-05-15 17:38:34,364 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.brentfordfc.com/en/news/article/first-team-brent]  competition=Premier League club=Brentford player=Keith Andrews theme=Injuries
+2026-05-15 17:38:35,596 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.goal.com/en/lists/despite-having-lost-the-fans-t]  competition=Premier League club=Liverpool player=Arne Slot theme=Managers
+2026-05-15 17:38:36,862 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.chosun.com/english/sports-en/2026/05/15/GS65IXFA]  competition=Premier League club=Manchester United player=Michael Carrick theme=Managers
+2026-05-15 17:38:37,788 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.flashscore.com/news/soccer-premier-league-carric]  competition=Champions League club=Manchester United player=Michael Carrick theme=Managers
+2026-05-15 17:38:38,727 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.sportingnews.com/us/europa-league]  competition=Europa League club=None player=None theme=None
+2026-05-15 17:38:39,796 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.uefa.com/uefaeuropaleague/clubs/1652--tottenham/]  competition=Europa League club=Tottenham Hotspur player=None theme=Fixtures
+2026-05-15 17:38:40,710 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.uefa.com/uefaeuropaleague/clubs/50125--athletic-]  competition=Europa League club=None player=None theme=Fixtures
+2026-05-15 17:38:41,653 [MainThread  ] [INFO    ] [enricher.py:24] Tagged [https://www.uefa.com/uefaeuropaleague/clubs/52682--man-utd/]  competition=Europa League club=Manchester United player=None theme=Fixtures
+2026-05-15 17:38:41,655 [MainThread  ] [INFO    ] [enricher.py:87] Deduped 1 duplicate stories (same player/club/theme)
+2026-05-15 17:38:41,656 [MainThread  ] [INFO    ] [enricher.py:39] Enrichment complete — tagged: 15, failed: 0
+2026-05-15 17:38:41,744 [MainThread  ] [INFO    ] [db_insert_handler.py:63] [DbInsertHandler] Inserted 15 new rows into dbo.articles
+2026-05-15 17:38:41,756 [MainThread  ] [INFO    ] [run_subscriber.py:53] Finished footyhub subscriber. Duration: 20.4s
+2026-05-15 17:39:14,156 [MainThread  ] [INFO    ] [main.py:41] Registered job: Fetch articles from Perplexity  article_queue
+2026-05-15 17:39:14,162 [MainThread  ] [INFO    ] [main.py:41] Registered job: Enrich article_queue with Claude  articles
+2026-05-15 18:00:00,001 [MainThread  ] [INFO    ] [main.py:46] Scheduler stopped.

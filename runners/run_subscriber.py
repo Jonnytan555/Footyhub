@@ -12,10 +12,10 @@ from utils.db.db_access import build_engine
 
 _DIR     = os.path.dirname(os.path.abspath(__file__))
 LOG_PATH = os.path.join(_DIR, "logs")
-engine   = build_engine(server=settings.DB_SERVER, database=settings.DB_NAME, driver=settings.DB_DRIVER)
+engine   = build_engine()
 
 from listeners.article_pipeline import ArticlePipeline
-from listeners.queue.db.db_queue_reader import DbQueueReader
+from listeners.queue.sqs.sqs_queue_consumer import SQSQueueConsumer
 from listeners.enrich.enricher import Enricher
 from listeners.save.article_writer import ArticleWriter
 from runners.ai.taxonomy import FOOTBALL_TREE
@@ -38,9 +38,9 @@ def run():
         start = time()
 
         ArticlePipeline(
-            reader=DbQueueReader(
-                engine=engine,
-                source_type=settings.SOURCE_TYPE,
+            reader=SQSQueueConsumer(
+                queue_url=os.environ["SQS_QUEUE_URL"],
+                region=os.environ.get("AWS_REGION", "eu-west-2"),
             ),
             enricher=Enricher(
                 api_key=os.environ["ANTHROPIC_API_KEY"],

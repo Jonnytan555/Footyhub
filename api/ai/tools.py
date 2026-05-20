@@ -12,6 +12,17 @@ TOOLS = [
         },
     },
     {
+        "name": "set_favourite_club",
+        "description": "Save the user's favourite football club. Use this when the user says 'my favourite club is X', 'I support X', or 'set my favourite team to X'. Once saved, you will use it as the default club when answering general questions.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "club": {"type": "string", "description": "The club name to save"},
+            },
+            "required": ["club"],
+        },
+    },
+    {
         "name": "search_articles",
         "description": "Search football articles by keyword, club, competition, or theme.",
         "input_schema": {

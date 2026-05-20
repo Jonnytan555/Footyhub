@@ -1,5 +1,6 @@
 anthropic
 APScheduler
+boto3
 fastapi
 httpx
 jinja2
@@ -7,11 +8,10 @@ python-jose[cryptography]
 pandas
 passlib[bcrypt]
 bcrypt==3.2.2
+psycopg2-binary
 pydantic
 python-dotenv
 python-multipart
 requests
 SQLAlchemy
-stomp.py
 uvicorn
-pyodbc
